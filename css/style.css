@@ -4,11 +4,52 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+body.dark {
+    background-color: rgb(141, 160, 164);
+    color: rgb(72, 64, 86);
+}
 
+h1, p {
+  transition: color 0.3s; 
+}
+
+body.dark h1 {
+  color: #3b7363; 
+}
+
+body.dark p {
+  color: gray; 
+}
 .banner {
     background-color: #fff6ef;
     padding: 20px;
     text-align: center;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tab {
+    padding: 10px;
+    cursor: pointer;
+    background: #ddd;
+}
+
+.tab.active {
+    background: #fff;
+    font-weight: bold;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
 }
 
 .banner-title {

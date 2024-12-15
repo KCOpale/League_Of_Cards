@@ -4,14 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>League of Cards</title>
+    <title>Onglets</title>
+    <title>Formulaire d'inscription</title>
+    <style>
+        .error { color: red; }
+        .success { color: green; }
+        .valid { border: 2px solid green; }
+        .invalid { border: 2px solid red; }
+    </style>
     <link href="https://fonts.googleapis.com/css2?family=Rocking+Horse&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <h1>Formulaire d'inscription</h1>
+    <form id="registrationForm">
+        <input type="text" id="pseudo" placeholder="Pseudo (6 caractères min)">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Mot de passe (8 caractères min)">
+        <input type="password" id="confirmPassword" placeholder="Confirmez le mot de passe">
+        <p>Niveau en programmation :</p>
+        <label><input type="radio" name="level" value="Débutant"> Débutant</label>
+        <label><input type="radio" name="level" value="Intermédiaire"> Intermédiaire</label>
+        <label><input type="radio" name="level" value="Avancé"> Avancé</label>
+        <button type="button" id="submitButton">S'inscrire</button>
+    </form>
+    <div id="message"></div>
+    <script src="script.js"></script>
+    <div class="tabs">      
+        <button class="tab" data-tab="tab2">Onglet 1</button>
+        <button class="tab" data-tab="tab3">Onglet 2</button>
+    </div>
+    <div class="contents">   
+        <div id="tab2" class="content">Contenu Onglet 1</div>
+        <div id="tab3" class="content">Contenu Onglet 2</div>
+    </div>
     <header class="banner">
         <h1 class="banner-title">League Of Cards</h1>
         <a href="page2.html" class="button">Go to Characters</a>
     </header>
+    <button onclick="toggleMode()">Mode Sombre</button>
+    <script src="../JavaScript/script.js"></script>
 
     <section class="cards-section">
         <div class="card card-text">Camille leblond - champion</div>
